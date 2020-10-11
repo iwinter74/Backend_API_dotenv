@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <% APIData.forEach(function(elt){ %>
+    <div>
+        <h3><%=elt.userId %></h3>
+        <p><%= elt.title%></p>
+        <% if(elt.completed){ %>
+        <img src="https://static.thenounproject.com/png/192276-200.png" alt="">
+        <% } else{ %>
+        <img src="https://image.flaticon.com/icons/png/512/106/106830.png" alt="">
+        <% } %>
+    </div>
+    <% }) %>
+
+</body>
+
+</html>
